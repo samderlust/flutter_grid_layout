@@ -1,39 +1,78 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/samderlust)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+# Flutter Grid Board - A simple grid layout
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+This package allow user to create a grid layout and free of customization on how heigh and width the children would be display.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Installing and import the library:
 
-## Features
+Like any other package, add the library to your pubspec.yaml dependencies:
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+```
+dependencies:
+    flutter_grid_board: <latest_version>
+```
 
-## Getting started
+Then import it wherever you want to use it:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```
+import 'package:flutter_grid_board/flutter_grid_board.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+look at example folder for all use cases
 
-```dart
-const like = 'sample';
+## Example
+
+<img src="https://raw.githubusercontent.com/samderlust/images/main/grid.png" alt="Flutter grid board" style="width:600px;"/>
+
+```
+GridBoard(
+        columns: 5,
+        rows: 4,
+        showGridLines: true,
+        children: [
+          GridItem(
+            top: 0,
+            left: 0,
+            spanLeft: 1,
+            spanDown: 2,
+            child: Container(
+              color: Colors.red.withOpacity(.4),
+            ),
+          ),
+          GridItem(
+            top: 1,
+            left: 0,
+            spanLeft: 3,
+            spanDown: 2,
+            child: Container(
+              color: Colors.green.withOpacity(.4),
+            ),
+          ),
+          GridItem(
+            top: 0,
+            left: 1,
+            spanLeft: 4,
+            spanDown: 1,
+            child: Container(
+              color: Colors.amber.withOpacity(.4),
+            ),
+          ),
+          GridItem(
+            top: 3,
+            left: 4,
+            spanLeft: 1,
+            spanDown: 1,
+            child: Container(
+              color: Colors.teal.withOpacity(.4),
+            ),
+          ),
+        ],
+      ),
 ```
 
-## Additional information
+## Appreciate Your Feedbacks and Contributes
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+If you find anything need to be improve or want to request a feature. Please go ahead and create an issue in the [Github](https://github.com/samderlust/flutter_grid_layout) repo
